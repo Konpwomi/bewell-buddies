@@ -1,11 +1,11 @@
-import homeSvg from "@/assets/images/home.svg"; // Adjust the path according to your project structure
+import homeSvg from "@/assets/home.svg"; // Adjust the path according to your project structure
 import { Button } from "./components/ui/button";
 import { BarChart, Flame, Activity, Utensils } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "./components/ui/card";
 
 function Home() {
   return (
-    <div className="mx-10 my-20 md:my-25 flex flex-col items-center gap-30 lg:mx-auto lg:max-w-6xl">
+    <div className="mx-10 my-20 flex flex-col items-center gap-30 md:my-25 lg:mx-auto lg:max-w-6xl">
       {/* Hero Section */}
       <div className="flex flex-col items-center gap-15 lg:mx-10 lg:flex-row-reverse lg:gap-40">
         <img className="h-70 w-70 lg:h-80 lg:w-80" src={homeSvg} alt="Home" />
@@ -49,10 +49,10 @@ function Home() {
             improving lives
           </p>
         </div>
-        <div className="mx-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <Card className="bg-white">
             <CardHeader className="text-center">
-              <BarChart className="text-blue-500 mx-auto mb-4 h-12 w-12" />
+              <BarChart className="mx-auto mb-4 h-12 w-12 text-blue-500" />
               <CardTitle>BMI Check</CardTitle>
             </CardHeader>
             <CardContent className="text-muted-foreground text-center">
@@ -63,7 +63,7 @@ function Home() {
 
           <Card className="bg-white">
             <CardHeader className="text-center">
-              <Flame className="text-blue-500 mx-auto mb-4 h-12 w-12" />
+              <Flame className="mx-auto mb-4 h-12 w-12 text-blue-500" />
               <CardTitle>Calorie Count</CardTitle>
             </CardHeader>
             <CardContent className="text-muted-foreground text-center">
@@ -74,7 +74,7 @@ function Home() {
 
           <Card className="bg-white">
             <CardHeader className="text-center">
-              <Activity className="text-blue-500 mx-auto mb-4 h-12 w-12" />
+              <Activity className="mx-auto mb-4 h-12 w-12 text-blue-500" />
               <CardTitle>Track Progress</CardTitle>
             </CardHeader>
             <CardContent className="text-muted-foreground text-center">
@@ -85,7 +85,7 @@ function Home() {
 
           <Card className="bg-white">
             <CardHeader className="text-center">
-              <Utensils className="text-blue-500 mx-auto mb-4 h-12 w-12" />
+              <Utensils className="mx-auto mb-4 h-12 w-12 text-blue-500" />
               <CardTitle>Meal Ideas</CardTitle>
             </CardHeader>
             <CardContent className="text-muted-foreground text-center">
@@ -107,7 +107,7 @@ function Home() {
           Committed to delivering exceptional healthcare services and improving
           lives
         </p>
-        <div className="grid grid-cols-1 gap-10 mx-10 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {[
             {
               quote:
@@ -135,9 +135,7 @@ function Home() {
             },
           ].map((testimonial, index) => (
             <div key={index} className="rounded-xl bg-white p-8 shadow-lg">
-              <div className="text-start ">
-                {testimonial.quote}
-              </div>
+              <div className="text-start">{testimonial.quote}</div>
               <div className="mt-3 bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-start font-semibold text-transparent">
                 {testimonial.author}
               </div>

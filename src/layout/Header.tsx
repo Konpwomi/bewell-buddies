@@ -21,7 +21,7 @@ function Header() {
             Bewell Buddies
           </Link>
           <img
-            src="../public/logo.png"
+            src="../public/images/logo.png"
             alt="Logo"
             className="mt-1 ml-1 h-3 w-3"
           />
@@ -37,7 +37,7 @@ function Header() {
             >
               Bewell Buddies
             </Link>
-            <div className="flex flex-col space-y-4 border-b-1  border-blue-600 px-5 pb-5 font-semibold">
+            <div className="flex flex-col space-y-4 border-b-1 border-blue-600 px-5 pb-5 font-semibold">
               {menuItems.map((menu, index) => (
                 <Link key={index} to={menu.href} className="">
                   {menu.name}
@@ -46,14 +46,18 @@ function Header() {
             </div>
           </SheetContent>
         </Sheet>
-        <div className="hidden gap-10 text-gray-500  lg:flex">
+        <div className="hidden gap-10 text-gray-500 lg:flex">
           {" "}
           {menuItems.map((menu, index) => (
-            <Link key={index} to={menu.href} className="transition duration-150 hover:text-blue-600 hover:underline hover:underline-offset-2">
+            <Link
+              key={index}
+              to={menu.href}
+              className="transition duration-150 hover:text-blue-600 hover:underline hover:underline-offset-2"
+            >
               {menu.name}
             </Link>
           ))}
-        </div> 
+        </div>
       </div>
     </nav>
   );
