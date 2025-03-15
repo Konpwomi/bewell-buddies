@@ -1,6 +1,8 @@
 import { Link } from "react-router";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { DialogTitle, DialogDescription } from "@radix-ui/react-dialog"; // Import DialogTitle and DialogDescription
+
 const menuItems = [
   { name: "BMI Check", href: "/bmi-check" },
   { name: "Calorie Count", href: "/calorie-count" },
@@ -21,7 +23,7 @@ function Header() {
             Bewell Buddies
           </Link>
           <img
-            src="../public/images/logo.png"
+            src="/images/logo.png"
             alt="Logo"
             className="mt-1 ml-1 h-3 w-3"
           />
@@ -31,13 +33,17 @@ function Header() {
             <Menu className="h-6 w-6 text-blue-600 sm:h-7 sm:w-7 lg:hidden" />
           </SheetTrigger>
           <SheetContent side="left">
+            <DialogTitle className="sr-only">Menu</DialogTitle>
+            <DialogDescription className="sr-only">
+              Navigation menu
+            </DialogDescription>
             <Link
               to="/"
               className="border-b border-blue-600 bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text p-5 pt-6 text-xl font-semibold text-transparent sm:text-2xl"
             >
               Bewell Buddies
             </Link>
-            <div className="flex flex-col space-y-4 border-b-1 border-blue-600 px-5 pb-5 font-semibold">
+            <div className="flex flex-col space-y-4 border-b-1 border-blue-600 px-5 py-5 pb-10 font-semibold">
               {menuItems.map((menu, index) => (
                 <Link key={index} to={menu.href} className="">
                   {menu.name}
@@ -47,7 +53,6 @@ function Header() {
           </SheetContent>
         </Sheet>
         <div className="hidden gap-10 text-gray-500 lg:flex">
-          {" "}
           {menuItems.map((menu, index) => (
             <Link
               key={index}

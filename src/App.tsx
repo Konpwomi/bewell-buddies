@@ -49,7 +49,7 @@ function Home() {
             improving lives
           </p>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:mx-10 lg:grid-cols-4">
           <Card className="bg-white">
             <CardHeader className="text-center">
               <BarChart className="mx-auto mb-4 h-12 w-12 text-blue-500" />
@@ -95,7 +95,7 @@ function Home() {
           </Card>
         </div>
       </section>
-      <div>
+      <div className="lg:mx-10">
         <div className="mb-5 text-center text-xl font-bold md:text-2xl lg:text-3xl">
           Testimonial{" "}
           <span className="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-xl text-transparent md:text-2xl lg:text-3xl">
