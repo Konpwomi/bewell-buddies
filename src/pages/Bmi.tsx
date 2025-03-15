@@ -59,10 +59,10 @@ const BMI_CATEGORIES = [
 
 const BMICalculator = () => {
   const [formData, setFormData] = useState({ weight: "", height: "" });
-  const [bmi, setBmi] = useState(null);
+  const [bmi, setBmi] = useState<number | null>(null);
   const [error, setError] = useState("");
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
