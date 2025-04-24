@@ -6,7 +6,7 @@ import Layout from "./layout/Layout.tsx";
 import Bmi from "./pages/Bmi.tsx";
 import Calorie from "./pages/Calorie.tsx";
 import Exercise from "./pages/Exercise.tsx";
-import Meal from "./pages/Meal.tsx";
+import MealIdeas from "./pages/MealIdeas.tsx";
 import Track from "./pages/Track.tsx";
 
 const root = document.getElementById("root");
@@ -21,7 +21,7 @@ if (root) {
           <Route path="/calorie-count" element={<Calorie />}></Route>
           <Route path="/track-progress" element={<Track />}></Route>
           <Route path="/match-exercises" element={<Exercise />}></Route>
-          <Route path="/meal-ideas" element={<Meal />}></Route>
+          <Route path="/meal-ideas" element={<MealIdeas />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>,

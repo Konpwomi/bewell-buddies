@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { AlertCircle } from "lucide-react";
 import CountUp from "react-countup";
-import "../lib/fadein.css";
 // if put .fade in className = that element will have fadein animation
 
 const BMI_CATEGORIES = [
@@ -62,7 +61,7 @@ const BMICalculator = () => {
   const [bmi, setBmi] = useState<number | null>(null);
   const [error, setError] = useState("");
 
-  const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -98,17 +97,18 @@ const BMICalculator = () => {
   const category = getCurrentCategory();
 
   return (
-    <div className="mx-auto my-10 flex max-w-6xl flex-col gap-10 items-center">
+    <div className="mx-auto my-10 flex max-w-6xl flex-col items-center gap-10">
       {/* Header */}
-      <div className="border-blue-500 border-b p-5 mx-10">
+      <div className="mx-10 border-b border-blue-500 p-5">
         <h1 className="mb-2 text-2xl font-bold">BMI Calculator</h1>
         <p className="text-gray-600">
-        Take charge of your health! Use our BMI calculator to understand your weight status and make informed decisions about your well-being.
+          Take charge of your health! Use our BMI calculator to understand your
+          weight status and make informed decisions about your well-being.
         </p>
       </div>
 
       {/* Calculator Card */}
-      <div className="rounded-xl bg-white mx-10 p-5 shadow-lg">
+      <div className="mx-10 rounded-xl bg-white p-5 shadow-lg">
         {error && (
           <div className="mb-4 flex items-center rounded-lg bg-red-50 p-4 text-red-700">
             <AlertCircle className="mr-2 h-5 w-5" />
