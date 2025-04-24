@@ -1,71 +1,144 @@
-import { Link } from "react-router";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { DialogTitle, DialogDescription } from "@radix-ui/react-dialog"; // Import DialogTitle and DialogDescription
+import { Link, useLocation } from "react-router";
+import { cn } from "@/lib/utils";
 
-const menuItems = [
-  { name: "BMI Check", href: "/bmi-check" },
-  { name: "Calorie Count", href: "/calorie-count" },
-  { name: "Track Progress", href: "/track-progress" },
-  { name: "Match Exercises", href: "/match-exercises" },
-  { name: "Meal Ideas", href: "/meal-ideas" },
+const routes = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "BMI Check",
+    path: "/bmi-check",
+  },
+  {
+    name: "Calorie Count",
+    path: "/calorie-count",
+  },
+  {
+    name: "Track Progress",
+    path: "/track-progress",
+  },
+  {
+    name: "Match Exercises",
+    path: "/match-exercises",
+  },
+  {
+    name: "Meal Ideas",
+    path: "/meal-ideas",
+  },
 ];
 
-function Header() {
+export default function Header() {
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
+
   return (
-    <nav className="sticky top-0 z-30 w-full bg-white/30 px-5 backdrop-blur-sm sm:px-10 xl:px-20">
-      <div className="flex h-16 items-center justify-between lg:h-20">
-        <div className="flex">
-          <Link
-            to="/"
-            className="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent sm:text-2xl lg:text-3xl"
-          >
-            Bewell Buddies
+    <header className="bg-background/30 font-nunito sticky top-0 z-50 w-full border-b backdrop-blur">
+      <div className="mx-auto flex h-16 w-full max-w-[1400px] items-center justify-between px-8">
+        <div className="relative flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
+            <span className="text-xl font-extrabold">Bewell Buddies</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="absolute -top-0 -right-4 text-green-600"
+            >
+              <path d="M5 12h14" />
+              <path d="M12 5v14" />
+            </svg>
           </Link>
-          <img
-            src="/images/logo.png"
-            alt="Logo"
-            className="mt-1 ml-1 h-3 w-3"
-          />
         </div>
-        <Sheet>
-          <SheetTrigger asChild>
-            <Menu className="h-6 w-6 text-blue-600 sm:h-7 sm:w-7 lg:hidden" />
-          </SheetTrigger>
-          <SheetContent side="left">
-            <DialogTitle className="sr-only">Menu</DialogTitle>
-            <DialogDescription className="sr-only">
-              Navigation menu
-            </DialogDescription>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon">
+                <Menu className="h-6 w-6 text-black" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetHeader className="sr-only">
+                <SheetTitle>Navigation Menu</SheetTitle>
+                <SheetDescription>
+                  Access all sections of Bewell Buddies
+                </SheetDescription>
+              </SheetHeader>
+              <div className="mt-10 flex flex-col gap-4 p-7">
+                {routes.map((route) => (
+                  <Link
+                    key={route.path}
+                    to={route.path}
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      "text-lg font-medium transition-colors hover:text-green-600",
+                      location.pathname === route.path
+                        ? "text-green-600"
+                        : "text-foreground",
+                    )}
+                  >
+                    {route.name}
+                  </Link>
+                ))}
+                <div className="mt-4 space-y-2">
+                  <Button className="w-full" variant="outline">
+                    Sign In
+                  </Button>
+                  <Button className="w-full bg-green-600 hover:bg-green-700">
+                    Sign Up
+                  </Button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-8 md:flex">
+          {routes.map((route) => (
             <Link
-              to="/"
-              className="border-b border-blue-600 bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text p-5 pt-6 text-xl font-semibold text-transparent sm:text-2xl"
+              key={route.path}
+              to={route.path}
+              className={cn(
+                "text-sm font-semibold transition-colors hover:text-green-600",
+                location.pathname === route.path
+                  ? "text-green-600"
+                  : "text-foreground",
+              )}
             >
-              Bewell Buddies
-            </Link>
-            <div className="flex flex-col space-y-4 border-b-1 border-blue-600 px-5 py-5 pb-10 font-semibold">
-              {menuItems.map((menu, index) => (
-                <Link key={index} to={menu.href} className="">
-                  {menu.name}
-                </Link>
-              ))}
-            </div>
-          </SheetContent>
-        </Sheet>
-        <div className="hidden gap-10 text-gray-500 lg:flex">
-          {menuItems.map((menu, index) => (
-            <Link
-              key={index}
-              to={menu.href}
-              className="transition duration-150 hover:text-blue-600 hover:underline hover:underline-offset-2"
-            >
-              {menu.name}
+              {route.name}
             </Link>
           ))}
+        </nav>
+
+        <div className="hidden items-center gap-2 md:flex">
+          <Button className="font-semibold" variant="ghost">
+            Sign In
+          </Button>
+          <Button className="bg-green-600 font-semibold hover:bg-green-700">
+            Sign Up
+          </Button>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
-
-export default Header;
