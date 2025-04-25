@@ -33,7 +33,7 @@ export interface Meal {
     {
       id: 1,
       name: "Greek Yogurt Parfait",
-      image: "/meals/1.png",
+      image: "/meals/Greek Yogurt Parfait.webp",
       mealType: "breakfast",
       tags: ["high-protein", "quick", "vegetarian", "low-calorie"],
       time: "5 min",
@@ -62,7 +62,7 @@ export interface Meal {
     {
       id: 2,
       name: "Avocado Toast with Egg",
-      image: "/meals/2.png",
+      image: "/meals/Avocado Toast with Egg.webp",
       mealType: "breakfast",
       tags: ["high-protein", "vegetarian", "omega-3", "heart-healthy"],
       time: "10 min",
@@ -94,7 +94,7 @@ export interface Meal {
     {
       id: 3,
       name: "Berry Protein Smoothie Bowl",
-      image: "/meals/3.png",
+      image: "/meals/Berry Protein Smoothie Bowl.webp",
       mealType: "breakfast",
       tags: ["high-protein", "quick", "vegetarian", "high-fiber"],
       time: "7 min",
@@ -123,7 +123,7 @@ export interface Meal {
     {
       id: 4,
       name: "Veggie Egg White Frittata",
-      image: "/meals/4.png",
+      image: "/meals/Veggie Egg White Frittata.webp",
       mealType: "breakfast",
       tags: ["high-protein", "low-carb", "vegetarian", "low-calorie"],
       time: "20 min",
@@ -157,7 +157,7 @@ export interface Meal {
     {
       id: 5,
       name: "Overnight Chia Seed Pudding",
-      image: "/meals/5.png",
+      image: "/meals/Overnight Chia Seed Pudding.webp",
       mealType: "breakfast",
       tags: ["vegetarian", "high-fiber", "omega-3", "heart-healthy"],
       time: "5 min + overnight",
@@ -186,7 +186,7 @@ export interface Meal {
     {
       id: 6,
       name: "Quinoa Breakfast Bowl",
-      image: "/meals/6.png",
+      image: "/meals/Quinoa Breakfast Bowl.webp",
       mealType: "breakfast",
       tags: ["high-protein", "high-fiber", "vegetarian", "heart-healthy"],
       time: "25 min",
@@ -218,7 +218,7 @@ export interface Meal {
     {
       id: 7,
       name: "Smoked Salmon Breakfast Wrap",
-      image: "/meals/7.png",
+      image: "/meals/Smoked Salmon Breakfast Wrap.webp",
       mealType: "breakfast",
       tags: ["high-protein", "omega-3", "heart-healthy", "quick"],
       time: "10 min",
@@ -253,7 +253,7 @@ export interface Meal {
     {
       id: 8,
       name: "Steel Cut Oatmeal with Caramelized Bananas",
-      image: "/meals/8.png",
+      image: "/meals/Steel Cut Oatmeal with Caramelized Bananas.webp",
       mealType: "breakfast",
       tags: ["high-fiber", "heart-healthy", "vegetarian", "low-fat"],
       time: "30 min",
@@ -288,7 +288,7 @@ export interface Meal {
     {
       id: 9,
       name: "Spinach and Mushroom Breakfast Quesadilla",
-      image: "/meals/9.png",
+      image: "/meals/Spinach and Mushroom Breakfast Quesadilla.webp",
       mealType: "breakfast",
       tags: ["high-protein", "vegetarian", "quick", "heart-healthy"],
       time: "15 min",
@@ -324,7 +324,7 @@ export interface Meal {
     {
       id: 10,
       name: "Peanut Butter Banana Breakfast Sandwich",
-      image: "/meals/10.png",
+      image: "/meals/Peanut Butter Banana Breakfast Sandwich.webp",
       mealType: "breakfast",
       tags: ["quick", "vegetarian", "high-protein", "high-fiber"],
       time: "5 min",
@@ -357,7 +357,7 @@ export interface Meal {
     {
       id: 11,
       name: "Mediterranean Chickpea Salad",
-      image: "/meals/11.png",
+      image: "/meals/Mediterranean Chickpea Salad.webp",
       mealType: "lunch",
       tags: ["high-fiber", "vegetarian", "heart-healthy", "quick"],
       time: "15 min",
@@ -391,7 +391,7 @@ export interface Meal {
     {
       id: 12,
       name: "Grilled Chicken and Quinoa Bowl",
-      image: "/meals/12.png",
+      image: "/meals/Grilled Chicken and Quinoa Bowl.webp",
       mealType: "lunch",
       tags: ["high-protein", "heart-healthy", "low-fat"],
       time: "25 min",
@@ -426,7 +426,7 @@ export interface Meal {
     {
       id: 13,
       name: "Salmon Nicoise Salad",
-      image: "/meals/13.png",
+      image: "/meals/Salmon Nicoise Salad.webp",
       mealType: "lunch",
       tags: ["high-protein", "omega-3", "heart-healthy", "low-carb"],
       time: "20 min",
@@ -460,7 +460,7 @@ export interface Meal {
     {
       id: 14,
       name: "Turkey and Avocado Wrap",
-      image: "/meals/14.png",
+      image: "/meals/Turkey and Avocado Wrap.webp",
       mealType: "lunch",
       tags: ["high-protein", "quick", "heart-healthy"],
       time: "10 min",
@@ -493,7 +493,7 @@ export interface Meal {
     {
       id: 15,
       name: "Lentil and Vegetable Soup",
-      image: "/meals/15.png",
+      image: "/meals/Lentil and Vegetable Soup.webp",
       mealType: "lunch",
       tags: ["high-fiber", "vegetarian", "heart-healthy", "low-fat"],
       time: "40 min",
@@ -532,7 +532,7 @@ export interface Meal {
     {
       id: 16,
       name: "Tuna and White Bean Salad",
-      image: "/meals/16.png",
+      image: "/meals/Tuna and White Bean Salad.webp",
       mealType: "lunch",
       tags: ["high-protein", "omega-3", "quick", "low-calorie"],
       time: "10 min",
@@ -566,7 +566,7 @@ export interface Meal {
     {
       id: 17,
       name: "Vegetable Quinoa Stir-Fry",
-      image: "/meals/17.png",
+      image: "/meals/Vegetable Quinoa Stir-Fry.webp",
       mealType: "lunch",
       tags: ["vegetarian", "high-fiber", "heart-healthy", "quick"],
       time: "20 min",
@@ -606,7 +606,7 @@ export interface Meal {
     {
       id: 18,
       name: "Chicken and Hummus Pita Pocket",
-      image: "/meals/18.png",
+      image: "/meals/Chicken and Hummus Pita Pocket.webp",
       mealType: "lunch",
       tags: ["high-protein", "quick", "heart-healthy", "low-fat"],
       time: "15 min",
@@ -642,7 +642,7 @@ export interface Meal {
     {
       id: 19,
       name: "Shrimp and Mango Sushi Bowl",
-      image: "/meals/19.png",
+      image: "/meals/Shrimp and Mango Sushi Bowl.webp",
       mealType: "lunch",
       tags: ["high-protein", "omega-3", "low-calorie", "heart-healthy"],
       time: "20 min",
@@ -680,7 +680,7 @@ export interface Meal {
     {
       id: 20,
       name: "Sweet Potato and Black Bean Burrito",
-      image: "/meals/20.png",
+      image: "/meals/Sweet Potato and Black Bean Burrito.webp",
       mealType: "lunch",
       tags: ["vegetarian", "high-fiber", "heart-healthy", "omega-3"],
       time: "30 min",
@@ -723,7 +723,7 @@ export interface Meal {
     {
       id: 21,
       name: "Baked Salmon with Roasted Vegetables",
-      image: "/meals/21.png",
+      image: "/meals/Baked Salmon with Roasted Vegetables.webp",
       mealType: "dinner",
       tags: ["high-protein", "omega-3", "heart-healthy", "low-carb"],
       time: "30 min",
@@ -759,7 +759,7 @@ export interface Meal {
     {
       id: 22,
       name: "Lemon Herb Grilled Chicken with Quinoa",
-      image: "/meals/22.png",
+      image: "/meals/Lemon Herb Grilled Chicken with Quinoa.webp",
       mealType: "dinner",
       tags: ["high-protein", "heart-healthy", "low-fat"],
       time: "35 min",
@@ -797,7 +797,7 @@ export interface Meal {
     {
       id: 23,
       name: "Vegetarian Chili with Cornbread",
-      image: "/meals/23.png",
+      image: "/meals/Vegetarian Chili with Cornbread.webp",
       mealType: "dinner",
       tags: ["vegetarian", "high-fiber", "high-protein", "heart-healthy"],
       time: "45 min",
@@ -838,7 +838,7 @@ export interface Meal {
     {
       id: 24,
       name: "Turkey Meatballs with Zucchini Noodles",
-      image: "/meals/24.png",
+      image: "/meals/Turkey Meatballs with Zucchini Noodles.webp",
       mealType: "dinner",
       tags: ["high-protein", "low-carb", "heart-healthy", "low-calorie"],
       time: "35 min",
@@ -879,7 +879,7 @@ export interface Meal {
     {
       id: 25,
       name: "Tofu and Vegetable Stir-Fry",
-      image: "/meals/25.png",
+      image: "/meals/Tofu and Vegetable Stir-Fry.webp",
       mealType: "dinner",
       tags: ["vegetarian", "high-protein", "heart-healthy", "low-calorie"],
       time: "25 min",
@@ -919,7 +919,7 @@ export interface Meal {
     {
       id: 26,
       name: "Shrimp and Veggie Fajitas",
-      image: "/meals/26.png",
+      image: "/meals/Shrimp and Veggie Fajitas.webp",
       mealType: "dinner",
       tags: ["high-protein", "quick", "heart-healthy", "low-fat"],
       time: "20 min",
@@ -962,7 +962,7 @@ export interface Meal {
     {
       id: 27,
       name: "Beef and Broccoli Stir-Fry",
-      image: "/meals/27.png",
+      image: "/meals/Beef and Broccoli Stir-Fry.webp",
       mealType: "dinner",
       tags: ["high-protein", "low-carb", "quick", "heart-healthy"],
       time: "25 min",
@@ -1002,7 +1002,7 @@ export interface Meal {
     {
       id: 28,
       name: "Stuffed Bell Peppers",
-      image: "/meals/28.png",
+      image: "/meals/Stuffed Bell Peppers.webp",
       mealType: "dinner",
       tags: ["high-protein", "high-fiber", "heart-healthy", "low-fat"],
       time: "45 min",
@@ -1046,7 +1046,7 @@ export interface Meal {
     {
       id: 29,
       name: "Eggplant and Chickpea Curry",
-      image: "/meals/29.png",
+      image: "/meals/Eggplant and Chickpea Curry.webp",
       mealType: "dinner",
       tags: ["vegetarian", "high-fiber", "heart-healthy", "low-calorie"],
       time: "35 min",
@@ -1089,7 +1089,7 @@ export interface Meal {
     {
       id: 30,
       name: "Pesto Baked Cod with Roasted Vegetables",
-      image: "/meals/30.png",
+      image: "/meals/Pesto Baked Cod with Roasted Vegetables.webp",
       mealType: "dinner",
       tags: ["high-protein", "omega-3", "heart-healthy", "low-carb"],
       time: "30 min",

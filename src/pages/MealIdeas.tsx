@@ -50,12 +50,13 @@ export default function MealIdeas() {
   return (
     <div className="font-nunito p-8 md:py-12">
       <div className="mx-auto max-w-6xl space-y-10">
-        <div className="space-y-2 text-center">
+        <div className="space-y-2  md:mb-16">
           <h1 className="text-3xl md:text-4xl font-bold">Meal Ideas</h1>
           <p className="text-muted-foreground">
             Discover nutritious and delicious meal options tailored to your
             dietary preferences.
           </p>
+          <div className="h-px bg-green-600 w-full my-4"></div>
         </div>
 
         <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
@@ -130,10 +131,10 @@ export default function MealIdeas() {
                         {meal.description}
                       </div>
                       <div className="text-muted-foreground flex items-center gap-2 text-sm">
-                        <Clock className="h-4 w-4" />
-                        <span>{meal.time}</span>
-                        <Flame className="ml-2 h-4 w-4" />
-                        <span>{meal.calories} cal</span>
+                        <Clock className="h-4 w-4 text-green-600" />
+                        <span className="text-black">{meal.time}</span>
+                        <Flame className="ml-2 h-4 w-4 text-orange-500" />
+                        <span className="text-black">{meal.calories} cal</span>
                       </div>
                     </CardHeader>
                     <CardFooter className="flex flex-wrap gap-2 pb-4">
@@ -170,7 +171,7 @@ export default function MealIdeas() {
                               <span>{selectedMeal.time}</span>
                             </span>
                             <span className="flex items-center gap-1">
-                              <Flame className="h-4 w-4 text-green-600" />
+                              <Flame className="h-4 w-4 text-orange-500" />
                               <span>{selectedMeal.calories} cal</span>
                             </span>
                             <span className="flex items-center gap-1">
