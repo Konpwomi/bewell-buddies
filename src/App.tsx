@@ -91,11 +91,11 @@ function Home() {
             <Button
               asChild
               size="lg"
-              className="bg-green-600 hover:bg-green-700"
+              className="bg-green-600 font-semibold hover:bg-green-700"
             >
               <Link to="/bmi-check">Get Started</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild className="font-semibold" variant="outline" size="lg">
               <Link to="/meal-ideas">Explore Meal Ideas</Link>
             </Button>
           </div>

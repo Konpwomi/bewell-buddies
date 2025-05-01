@@ -48,9 +48,9 @@ export default function MealIdeas() {
   });
 
   return (
-    <div className="font-nunito p-8 md:py-12">
+    <div className="font-nunito p-8 md:py-10">
       <div className="mx-auto max-w-6xl space-y-10">
-        <div className="space-y-2  md:mb-16">
+        <div className="space-y-2  md:mb-10">
           <h1 className="text-3xl md:text-4xl font-bold">Meal Ideas</h1>
           <p className="text-muted-foreground">
             Discover nutritious and delicious meal options tailored to your
@@ -66,15 +66,15 @@ export default function MealIdeas() {
             onValueChange={setSelectedMealType}
             className="w-full md:w-auto"
           >
-            <TabsList className="grid w-full grid-cols-4 md:w-auto">
-              <TabsTrigger value="all">All Meals</TabsTrigger>
-              <TabsTrigger value="breakfast">Breakfast</TabsTrigger>
-              <TabsTrigger value="lunch">Lunch</TabsTrigger>
-              <TabsTrigger value="dinner">Dinner</TabsTrigger>
+            <TabsList className="grid w-full  grid-cols-4 md:w-auto">
+              <TabsTrigger className="font-semibold" value="all">All Meals</TabsTrigger>
+              <TabsTrigger className="font-semibold" value="breakfast">Breakfast</TabsTrigger>
+              <TabsTrigger className="font-semibold" value="lunch">Lunch</TabsTrigger>
+              <TabsTrigger className="font-semibold" value="dinner">Dinner</TabsTrigger>
             </TabsList>
           </Tabs>
 
-          <div className="flex w-full flex-col gap-4 sm:flex-row md:w-auto">
+          <div className="flex w-full flex-col font-semibold gap-4 sm:flex-row md:w-auto">
             <Select value={selectedTag} onValueChange={setSelectedTag}>
               <SelectTrigger className="w-full sm:w-[180px]">
                 <SelectValue placeholder="Filter by type" />
